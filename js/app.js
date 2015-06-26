@@ -82,15 +82,14 @@ var substringMatcher = function(strs) {
     // iterate through the pool of strings and for any string that
     // contains the substring `q`, add it to the `matches` array
     $.each(strs, function(i, str) {
-      if (substrRegex.test(str)) {
-        matches.push(str);
+      if (substrRegex.test(i)) {
+        matches.push(i);
       }
     });
 
     cb(matches);
   };
 };
-
 
 $("input#pokemon").on("keyup", teclaPresionada );
 
